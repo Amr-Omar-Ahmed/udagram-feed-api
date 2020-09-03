@@ -2,6 +2,9 @@ FROM node:13
 
 WORKDIR /usr/src/app
 
+RUN apt-get update && apt-get install -y \
+    zip
+
 COPY package*.json ./
 
 COPY . .
